@@ -19,5 +19,3 @@ A DHT11 sensor connected to an ESP32 collects temperature and humidity data and 
 ## Results
 Fog processing provides quicker response times since computations occur closer to the sensor, while cloud processing offers better scalability and data visibility at the cost of higher latency.
 
-## Wiring Diagram
-## Schematic Diagram
