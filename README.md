@@ -1,1 +1,1 @@
-# IoT-Temperature-and-Humidity-Sensor-Node
+# IoT Temperature and Humidity Sensor Node
