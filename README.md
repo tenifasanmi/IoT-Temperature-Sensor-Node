@@ -1,7 +1,7 @@
 # IoT Temperature Sensor Node
 ## Overview
-This project demonstrates how fog and cloud computing process IoT sensor data differently in terms of latency and response time.
-A DHT11 sensor connected to an ESP32 collects temperature and humidity data and sends it to a Raspberry Pi acting as a fog node (local processing) and to a cloud server (Adafruit IO) for remote processing.
+This project demonstrates fog and cloud computing for IoT sensor data, differing in terms of latency and response time.
+A DHT11 sensor connected to an ESP32 collects temperature and humidity data, and sends it to a Raspberry Pi acting as a fog node (local processing) and to a cloud server (Adafruit IO) for remote processing.
 
 ### Workflow
 * The ESP32 reads data from the DHT11 sensor.
@@ -15,6 +15,11 @@ A DHT11 sensor connected to an ESP32 collects temperature and humidity data and 
 * Fog Node (Raspberry Pi)
 * Custom PCB for connecting DHT11 to ESP32-WROOM-32E Dev Board
 * MQTT Broker
+
+## PCB Connection Board
+<p align=center /p><img width="422" height="719" alt="image" src="https://github.com/user-attachments/assets/4ed67f79-c707-4c5d-b568-2bedaba825a1" />
+
+
 
 ## Results
 Fog processing provides quicker response times since computations occur closer to the sensor, while cloud processing offers better scalability and data visibility at the cost of higher latency.
