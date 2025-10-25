@@ -20,7 +20,8 @@ A DHT11 sensor connected to an ESP32 collects temperature and humidity data, and
 <p align=center /p><img width="300" height="510" alt="image" src="https://github.com/user-attachments/assets/4ed67f79-c707-4c5d-b568-2bedaba825a1" />
 
 #### Schematic
-<p align = center /p><img width="528" height="500" alt="image" src="https://github.com/user-attachments/assets/95a12407-f92b-4bc6-b4e7-89fbe86dfe88" />
+<p align = center /p><img width="632" height="702" alt="image" src="https://github.com/user-attachments/assets/fc037a47-4225-458f-a211-8d8ac6c34095" />
+
 
 
 ## Results
