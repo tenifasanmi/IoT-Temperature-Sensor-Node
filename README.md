@@ -10,10 +10,10 @@ A DHT11 sensor connected to an ESP32 collects temperature and humidity data and 
 * The Cloud (Adafruit IO) stores the readings, allows remote access, and may send cloud-level feedback back to the system.
 
 ## Materials Used
-* ESP32
+* ESP32-WROOM-32E Dev Board
 * DHT11 Sensor
 * Fog Node (Raspberry Pi)
-* Jumper Wires
+* Custom PCB for connecting DHT11 to ESP32-WROOM-32E Dev Board
 * MQTT Broker
 
 ## Results
