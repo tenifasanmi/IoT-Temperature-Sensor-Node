@@ -16,9 +16,11 @@ A DHT11 sensor connected to an ESP32 collects temperature and humidity data, and
 * Custom PCB for connecting DHT11 to ESP32-WROOM-32E Dev Board
 * MQTT Broker
 
-## PCB Connection Board
-<p align=center /p><img width="422" height="719" alt="image" src="https://github.com/user-attachments/assets/4ed67f79-c707-4c5d-b568-2bedaba825a1" />
+#### Custom PCB Connection Board
+<p align=center /p><img width="300" height="510" alt="image" src="https://github.com/user-attachments/assets/4ed67f79-c707-4c5d-b568-2bedaba825a1" />
 
+#### Schematic
+<p align = center /p><img width="528" height="500" alt="image" src="https://github.com/user-attachments/assets/95a12407-f92b-4bc6-b4e7-89fbe86dfe88" />
 
 
 ## Results
