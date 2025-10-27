@@ -11,7 +11,7 @@ Initially, this system was tested using a Raspberry Pi 4b as the sensor node, an
 * The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data to the cloud.
 * The Cloud (Adafruit IO) stores the readings, allows remote access, and may send cloud-level feedback back to the system.
 
-## Materials Used
+### Materials Used
 * ESP32-WROOM-32E Dev Board
 * DHT11 Sensor
 * Fog Node (Raspberry Pi)
