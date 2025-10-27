@@ -9,7 +9,7 @@ Initially, this system was tested using a Raspberry Pi 4B as the sensor node and
 * The Raspberry Pi reads data from the DHT11 sensor.
 * It publishes the readings to the PC (Fog Node) via MQTT.
 * The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data to the cloud.
-* The Cloud (Adafruit IO) stores the readings, allows remote access, and may send cloud-level feedback back to the system.
+* The Cloud (Adafruit IO) stores the readings, allows remote access, and sends cloud-level feedback back to the system.
 
 ### Materials Used
 * Raspberry Pi 4B
@@ -18,12 +18,18 @@ Initially, this system was tested using a Raspberry Pi 4B as the sensor node and
 * Cloud Server (Adafruit IO)
 * MQTT Broker
 
+#### Wiring Diagram
+<p align=center><img width="433" height="437" alt="image" src="https://github.com/user-attachments/assets/2df82816-ac34-46b1-88dd-9a2d2e15b375" />
+
+#### Schematic
+<p align=center><img width="448" height="428" alt="image" src="https://github.com/user-attachments/assets/b2a4b651-38d1-4a64-b0c2-801f958e6c78" />
+
 ## ESP 32-based IoT Sensor Node
 ### Workflow
 * The ESP32 reads data from the DHT11 sensor.
 * It publishes the readings to the Raspberry Pi (Fog Node) via MQTT.
 * The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data back to the ESP32.
-* For the Cloud implementation using Adafruit IO, the data is sent to the cloud server, where data processing takes place.
+* For the Cloud implementation using Adafruit IO, the data is sent to the cloud server, where data processing takes place feedback.
 
 ### Materials Used
 * ESP32-WROOM-32E Dev Board
