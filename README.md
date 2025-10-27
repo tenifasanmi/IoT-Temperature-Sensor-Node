@@ -1,15 +1,29 @@
 # IoT Temperature Sensor Node
 ## Overview
 This project demonstrates fog and cloud computing for IoT sensor data, differing in terms of latency and response time.
-A DHT11 sensor connected to an ESP32 collects temperature and humidity data, and sends it to a Raspberry Pi acting as a fog node (local processing) and to a cloud server (Adafruit IO) for remote processing. For this project, I made use of Freenove's ESP32 WROOM Development Board. This choice was mainly due to its small size and wifi/Bluetooth capabilities. I couldn't find a footprint/symbol for this board online for use in my schematics, so I designed the PCB using a pin header connector to connect my board to the PCB. The pin headers correspond with the pins of the devboard and allow for connection between the board and the temperature sensor. The DHT11 can also be interchanged with the DHT22 temperature sensor, which offers higher accuracy and a wider temperature range, but is more costly.
-Initially, this system was tested using a Raspberry Pi 4b as the sensor node, and my local Pc as the fog node for processing. Due to constraints in real-world applications, such as size, as well as the fact that this is a small-scale device which doesn't require all the functionalities of a Raspberry Pi 4B, this project was switched to an ESP32. For this project, the code was written in Python using the Raspberry Pi; however, I have decided to implement it in C for the ESP32. The functionality remains the same for both implementations.
+A DHT11 sensor connected to an ESP32 collects temperature and humidity data, and sends it to a Raspberry Pi acting as a fog node (local processing) or to a cloud server (Adafruit IO) for remote processing. For this project, I made use of Freenove's ESP32 WROOM Development Board. This choice was mainly due to its small size and wifi/Bluetooth capabilities. I couldn't find a footprint/symbol for this board online for use in my schematics, so I designed the PCB using a pin header connector to connect my board to the PCB. The pin headers correspond with the pins of the devboard and allow for connection between the board and the temperature sensor. The DHT11 can also be interchanged with the DHT22 temperature sensor, which offers higher accuracy and a wider temperature range, but is more costly.
+Initially, this system was tested using a Raspberry Pi 4B as the sensor node and my local PC as the fog node for processing. Due to constraints in real-world applications, such as size, as well as the fact that this is a small-scale device which doesn't require all the functionalities of a Raspberry Pi 4B, this project was switched to an ESP32. For this project, the code was written in Python using the Raspberry Pi; however, I have decided to implement it in C for the ESP32. The functionality remains the same for both implementations.
+
+## Raspberry Pi-based IoT Sensor Node
+### Workflow
+* The Raspberry Pi reads data from the DHT11 sensor.
+* It publishes the readings to the PC (Fog Node) via MQTT.
+* The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data to the cloud.
+* The Cloud (Adafruit IO) stores the readings, allows remote access, and may send cloud-level feedback back to the system.
+
+### Materials Used
+* Raspberry Pi 4B
+* DHT11 Sensor
+* Fog Node (Windows PC)
+* Cloud Server (Adafruit IO)
+* MQTT Broker
 
 ## ESP 32-based IoT Sensor Node
 ### Workflow
 * The ESP32 reads data from the DHT11 sensor.
 * It publishes the readings to the Raspberry Pi (Fog Node) via MQTT.
-* The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data to the cloud.
-* The Cloud (Adafruit IO) stores the readings, allows remote access, and may send cloud-level feedback back to the system.
+* The Fog Node locally processes the data, sends a feedback message (e.g., “Too cold, turn on heater”), and forwards the data back to the ESP32.
+* For the Cloud implementation using Adafruit IO, the data is sent to the cloud server, where data processing takes place.
 
 ### Materials Used
 * ESP32-WROOM-32E Dev Board
